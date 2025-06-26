@@ -13,12 +13,12 @@ const events = [
   {
     date: "March 19, 2025",
     image: image21,
-    desc: "Discover cutting-edge web design strategies tailored for modern businesses and creators."
+    desc: "Automation testing accelerates release cycles by executing 1,000 tests in minutes—something impossible manually"
   },
   {
     date: "March 22, 2025",
     image: image23,
-    desc: "Ignite innovation through hands-on collaboration between designers, developers, and visionaries."
+    desc: "Manual testing tells you if the software works. Automation tells you if it keeps working."
   }
 ];
 
@@ -30,7 +30,7 @@ const getInitialPosition = (index) => {
 
 const Events = () => {
   return (
-    <section id="events" className="w-full py-10 md:py-32 bg-black text-white relative select-none">
+    <section id="events" className="w-full py-10 md:py-32 bg-gradient-to-r from-blue-400 via-purple-400 text-white relative select-none">
       <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-[#311b3f] to-transparent z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

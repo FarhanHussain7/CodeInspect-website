@@ -32,7 +32,7 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="bg-gradient-to-r from-black to-blue-950 text-white py-5 md:py-24 px-10 relative z-10">
+    <div className="bg-gradient-to-r from-blue-400 via-purple-400 text-white py-5 md:py-24 px-10 relative z-10">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
@@ -42,7 +42,7 @@ const FAQ = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl font-bold bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"
+              className="text-5xl font-bold bg-white text-transparent bg-clip-text"
             >
               FAQ About <br /> CodeInspect
             </motion.h1>
@@ -77,7 +77,7 @@ const FAQ = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-4 text-gray-400">{faq.answer}</p>
+                      <p className="pb-4 text-white">{faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

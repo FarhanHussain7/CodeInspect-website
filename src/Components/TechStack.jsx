@@ -52,7 +52,7 @@ const fadeInUp = {
 
 const TechStack = () => {
   return (
-    <div className="relative bg-black text-white py-10 md:py-24 px-8">
+    <div className="relative bg-gradient-to-r from-blue-400 via-purple-400 text-white py-10 md:py-24 px-8">
       <div className="max-w-7xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

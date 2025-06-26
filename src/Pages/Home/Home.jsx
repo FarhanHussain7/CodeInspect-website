@@ -112,19 +112,21 @@ const HomePage = () => {
 
       <div className="relative top-20 left-0 w-full h-screen " />
       <div className="absolute w-full h-screen inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10 pointer-events-none">
-        {/* <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center">
+        <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center">
           CodeInspect
-        </h1> */}
-        <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 bg-clip-text text-transparent ">
+        </h1>
+        {/* <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 bg-clip-text text-transparent ">
   CodeInspect
-</h1>
+</h1> */}
+
+
 
         <p className="text-xl font-[Host_Grotesk] tracking-wider text-center">- Automate Everything. Deliver Anything - </p>
       </div>
       <div className="relative z-0">
 
         {/* Services Section */}
-        <section className="relative w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-zinc-900 px-3 text-center">
+        <section className="relative w-full bg-gradient-to-r from-blue-400 via-purple-400 px-3 text-center">
           <div className=" bg-gradient-to-br from-indigo-900 via-purple-900 to-zinc-900 max-w-7xl mx-auto text-white py-20 px-2">
             <h2 className="text-[9vw] md:text-[4.5vw] font-bold uppercase">Services</h2>
             {/* <div className="w-24 h-1 mx-auto mb-10 bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-500 animate-gradientMove rounded-full"></div> */}
@@ -219,7 +221,7 @@ const HomePage = () => {
         </section>
 
         {/* Benefits */}
-        <div className="w-full bg-gradient-to-r from-blue-900 via-black to-purple-900 text-white px-10 sm:px-6 md:px-8 py-12 sm:py-16">
+        <div className="w-full bg-gradient-to-r from-blue-400 via-purple-400 text-white px-10 sm:px-6 md:px-8 py-12 sm:py-16">
           <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8">
             {/* Left Section Title */}
             <div className="w-full lg:w-2/5 mb-6 lg:mb-0">

@@ -110,6 +110,9 @@ const Footer = () => {
                 >
                   info@CodeInspect.com
                 </a>
+                <p className="text-lg text-gray-50 hover:text-white transition">
+                    Email : arunpe878@gmail.com 
+                </p>
               </div>
             </div>
           </motion.div>
@@ -121,19 +124,19 @@ const Footer = () => {
               <li>
                 <button
                   onClick={handleScrollToTop}
-                  className="hover:text-gray-300 transition duration-300"
+                  className="hover:text-pink-300 transition duration-300"
                 >
                   Home
                 </button>
               </li>
               <li>
-                <Link to="/refund-policy" className="hover:text-gray-300 transition duration-300">Refund Policy</Link>
+                <Link to="/refund-policy" className="hover:text-pink-300 transition duration-300">Refund Policy</Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="hover:text-gray-300 transition duration-300">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="hover:text-pink-300 transition duration-300">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/terms-conditions" className="hover:text-gray-300 transition duration-300">Terms & Conditions</Link>
+                <Link to="/terms-conditions" className="hover:text-pink-300 transition duration-300">Terms & Conditions</Link>
               </li>
             </ul>
           </motion.div>
@@ -144,10 +147,10 @@ const Footer = () => {
           className="mt-10 border-t border-gray-700 pt-4 text-center"
           variants={fadeInUp}
         >
-          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400">
+          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
             &copy; {new Date().getFullYear()} CodeInspect. All rights reserved.
           </p>
-          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400">
+          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
             &copy; Powered By PigoPi.
           </p>
         </motion.div>

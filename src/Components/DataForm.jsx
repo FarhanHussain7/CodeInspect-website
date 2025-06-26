@@ -3,7 +3,7 @@ import React from 'react';
 const DataForm = () => {
   return (
     <>
-      <div id='contact' className="w-full relative  bg-black py-12 px-8">
+      <div id='contact' className="w-full relative  bg-gradient-to-r from-blue-400 via-purple-400 py-12 px-8">
         <div className='flex items-center justify-center'>
           <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8">
             

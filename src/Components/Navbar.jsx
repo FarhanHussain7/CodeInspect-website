@@ -131,7 +131,7 @@ const Header = () => {
   {/* Animated shine effect */}
   <span className="absolute inset-0 z-0 bg-white/5 group-hover:bg-white/10 transition-all duration-700 ease-in-out transform -translate-x-full group-hover:translate-x-0"></span>
 
-  <span className="relative z-10 flex items-center justify-center gap-2">
+  <span className="relative z-10 flex items-center justify-center gap-2 text-bold">
     Contact Now
     {/* Optional arrow icon */}
     <svg 
