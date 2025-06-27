@@ -6,18 +6,27 @@ const frontendTech = [
   { name: 'Cypress', icon: '/tech/Cypress.svg' },
   { name: 'Playwright', icon: '/tech/Playwrite.svg' },
   { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
+  { name: 'Postman', icon: '/tech/postman-icon-svgrepo-com.svg'},
+  { name: 'Ranorex', icon: '/tech/Cypress.svg'},
 ];
 
 const backendTech = [
   { name: 'JMeter', icon: '/tech/jmeter.svg' },
   { name: 'Gatling', icon: '/tech/Gatling.svg' },
   { name: 'Jira', icon: '/tech/Jira.svg' },
+  { name: 'k6', icon: '/tech/K6_idFWmVoXOM_1.svg'},
+  { name: 'Locust', icon: '/tech/Jira.svg'},
+  { name: 'BlazeMeter', icon: '/tech/blazemeter-svgrepo-com.svg'},
 ];
 
 const mobileTech = [
   { name: 'JUnit', icon: '/tech/JUnit.svg' },
   { name: 'Jest', icon: '/tech/Jest.svg' },
   { name: 'pytest', icon: '/tech/pytest.svg' },
+  { name: 'Jenkins', icon: '/tech/jenkins-svgrepo-com.svg'},
+  { name: 'xUnit', icon: '/tech/'},
+  { name: 'Mocha', icon: '/tech/mocha-svgrepo-com.svg'},
+
 ];
 
 const databaseTech = [
