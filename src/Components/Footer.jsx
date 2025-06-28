@@ -163,7 +163,7 @@ const Footer = () => {
     &copy; {new Date().getFullYear()} CodeInspect. All rights reserved.
   </p>
   <p className="text-sm text-right text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400">
-     Powered By PigoPi.
+     Powered By PigoPi
   </p>
 </motion.div>
       </div>

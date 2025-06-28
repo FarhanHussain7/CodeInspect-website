@@ -226,7 +226,7 @@ const HomePage = () => {
           <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8">
             {/* Left Section Title */}
             <div className="w-full lg:w-2/5 mb-6 lg:mb-0">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal">The Benefits</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">The Benefits</h2>
             </div>
 
             {/* Right Section Content */}

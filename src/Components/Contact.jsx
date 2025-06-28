@@ -82,7 +82,7 @@ export const ContactForm = () => {
     <form
   ref={form}
   onSubmit={sendEmail}
-  className="w-full max-w-xl mx-auto p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white"
+  className="w-full max-w-xl mx-auto p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 text-white"
 >
   <label className="block mb-2 text-sm font-medium">Name</label>
   <input

@@ -6,26 +6,26 @@ const frontendTech = [
   { name: 'Cypress', icon: '/tech/Cypress.svg' },
   { name: 'Playwright', icon: '/tech/Playwrite.svg' },
   { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
-  // { name: 'Postman', icon: '/tech/postman-icon-svgrepo-com.svg'},
-  // { name: 'Ranorex', icon: '/tech/Cypress.svg'},
+  { name: 'Postman', icon: '/tech/Jira.svg'},
+  { name: 'Ranorex', icon: '/tech/Cypress.svg'},
 ];
 
 const backendTech = [
   { name: 'JMeter', icon: '/tech/jmeter.svg' },
   { name: 'Gatling', icon: '/tech/Gatling.svg' },
   { name: 'Jira', icon: '/tech/Jira.svg' },
-  // { name: 'k6', icon: '/tech/K6_idFWmVoXOM_1.svg'},
-  // { name: 'Locust', icon: '/tech/Jira.svg'},
-  // { name: 'BlazeMeter', icon: '/tech/blazemeter-svgrepo-com.svg'},
+  { name: 'k6', icon: '/tech/Jira.svg'},
+  { name: 'Locust', icon: '/tech/Jira.svg'},
+  { name: 'BlazeMeter', icon: '/tech/Jira.svg'},
 ];
 
 const mobileTech = [
   { name: 'JUnit', icon: '/tech/JUnit.svg' },
   { name: 'Jest', icon: '/tech/Jest.svg' },
   { name: 'pytest', icon: '/tech/pytest.svg' },
-  // { name: 'Jenkins', icon: '/tech/jenkins-svgrepo-com.svg'},
-  // { name: 'xUnit', icon: '/tech/'},
-  // { name: 'Mocha', icon: '/tech/mocha-svgrepo-com.svg'},
+  { name: 'Jenkins', icon: '/tech/Jira.svg'},
+  { name: 'xUnit', icon: '/tech/Jira.svg'},
+  { name: 'Mocha', icon: '/tech/Jira.svg'},
 
 ];
 
@@ -68,8 +68,8 @@ const TechStack = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          // className="md:text-[5vw] text-[8vw] font-bold text-center uppercase"
-          className="text-4xl sm:text-5xl lg:text-6xl font-normal text-center uppercase"
+          className="md:text-[5vw] text-[8vw] font-bold text-center uppercase"
+          // className="text-4xl sm:text-5xl lg:text-6xl font-normal text-center uppercase"
         >
           Our Tech Stack
         </motion.h1>
@@ -87,7 +87,7 @@ const TechStack = () => {
             Functional Testing Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {frontendTech.map((tech, index) => {
               const gradient = gradientStyles[index % gradientStyles.length];
               return (
@@ -106,7 +106,30 @@ const TechStack = () => {
                 </motion.div>
               );
             })}
-          </div>
+          </div> */}
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+  {frontendTech.map((tech, index) => {
+    const gradient = gradientStyles[index % gradientStyles.length];
+    return (
+      <motion.div
+        key={tech.name}
+        custom={index}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        style={gradient}
+        className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
+      >
+        <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
+        <span className="text-xl font-medium text-white font-[Host_Grotesk]">
+          {tech.name}
+        </span>
+      </motion.div>
+    );
+  })}
+</div>
         </div>
 
         {/* Backend Technologies */}
@@ -133,7 +156,7 @@ const TechStack = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.2 }}
                   style={style}
-                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition duration-300"
+                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
                   <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
@@ -167,7 +190,7 @@ const TechStack = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.2 }}
                   style={style}
-                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition duration-300"
+                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
                   <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
