@@ -13,7 +13,7 @@ const MainHome = () => (
   <>
     <Home />
     {/* <Services /> */}
-    {/* <Features /> */}
+    <Features />
     <TechStack />
     <Events />
     {/* <Review /> */}

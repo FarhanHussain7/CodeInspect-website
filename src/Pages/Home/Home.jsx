@@ -127,7 +127,8 @@ const HomePage = () => {
 
         {/* Services Section */}
         <section className="relative w-full bg-gradient-to-r from-blue-400 via-purple-400 px-3 text-center">
-          <div className=" bg-gradient-to-br from-indigo-900 via-purple-900 to-zinc-900 max-w-7xl mx-auto text-white py-20 px-2">
+          {/* <div className=" bg-gradient-to-br from-indigo-900 via-purple-900 to-zinc-900 max-w-7xl mx-auto text-white py-20 px-2"> */}
+            <div className="bg-gradient-to-br from-orange-300 via-pink-300 to-purple-300 max-w-7xl mx-auto text-white py-20 px-4 sm:px-8">
             <h2 className="text-[9vw] md:text-[4.5vw] font-bold uppercase">Services</h2>
             {/* <div className="w-24 h-1 mx-auto mb-10 bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-500 animate-gradientMove rounded-full"></div> */}
 

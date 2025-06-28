@@ -13,7 +13,7 @@ const DataForm = () => {
           <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8">
             
             {/* Left Gradient Panel */}
-            <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 bg-blue-300 rounded-t-3xl md:rounded-tr-3xl md:rounded-br-3xl md:rounded-bl-3xl md:rounded-tl-none">
+            {/* <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 bg-blue-300 rounded-t-3xl md:rounded-tr-3xl md:rounded-br-3xl md:rounded-bl-3xl md:rounded-tl-none">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
                 Testing: The Silent Guardian of Software Quality
               </h1>
@@ -21,7 +21,17 @@ const DataForm = () => {
                 In the race to innovate, testing is the disciplined pacekeeper—preventing speed from compromising quality.
                 If you can't find a direct contact within the app or on the website, try reaching out via email.
               </p>
-            </div>
+            </div> */}
+
+            <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 bg-gradient-to-br from-indigo-700 via-purple-600 to-pink-500 rounded-t-3xl md:rounded-tr-3xl md:rounded-br-3xl md:rounded-bl-3xl md:rounded-tl-none">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+    Testing: The Silent Guardian of Software Quality
+  </h1>
+  <p className="text-base sm:text-2xl font-bold text-white">
+    In the race to innovate, testing is the disciplined pacekeeper—preventing speed from compromising quality.
+    If you can't find a direct contact within the app or on the website, try reaching out via email.
+  </p>
+</div>
 
             {/* Right Form Panel */}
             {/* <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 bg-blue-800 rounded-3xl shadow-2xl z-10 -mt-8 md:mt-0">

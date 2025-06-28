@@ -52,7 +52,7 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-        <img src={logo1} alt="logo" className="w-24 h-22" />
+        <img src={logo1} alt="logo" className="w-28 h-25" />
 
         {/* Desktop Nav */}
           <div className="hidden xl:flex xl:items-center xl:justify-between font-[Host_Grotesk] text-lg gap-20  px-6 py-2 rounded-xl text-white">
@@ -122,7 +122,7 @@ const Header = () => {
         </a> */}
         <a
   href="#contact"
-  className="relative px-8 py-2 font-bold text-lg text-white border-2 border-white rounded-xl group overflow-hidden transition-all duration-300 hover:bg-gray-900"
+  className="relative px-8 py-2 font-bold text-lg text-white border-2 border-white rounded-xl group overflow-hidden transition-all duration-300 bg-zinc-300 hover:bg-gray-900"
   onClick={e => handleAnchorClick(e, '#contact')}
 >
   {/* Subtle glow effect on hover */}
@@ -131,7 +131,7 @@ const Header = () => {
   {/* Animated shine effect */}
   <span className="absolute inset-0 z-0 bg-white/5 group-hover:bg-white/10 transition-all duration-700 ease-in-out transform -translate-x-full group-hover:translate-x-0"></span>
 
-  <span className="relative z-10 flex items-center justify-center gap-2 text-bold">
+  <span className="relative z-10 flex items-center justify-center gap-2 font-bold text-blue-500">
     Contact Now
     {/* Optional arrow icon */}
     <svg 

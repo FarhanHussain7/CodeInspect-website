@@ -1,22 +1,25 @@
 import React from 'react';
-import image21 from '../assets/Events/image21.jpg';
-import image23 from '../assets/Events/image23.png';
-import image22 from '../assets/Events/image22.png';
+// import image21 from '../assets/Events/image21.jpg';
+// import image23 from '../assets/Events/image23.png';
+// import image22 from '../assets/Events/image22.png';
+import image21 from '../assets/Events/image1.webp';
+import image23 from '../assets/Events/image2.jpg';
+import image22 from '../assets/Events/image3.jpg';
 import { motion } from "framer-motion";
 
 const events = [
   {
-    date: "Feb 4, 2025",
+    date: "Aug 14, 2024",
     image: image22,
     desc: "Unlock the full potential of your website with expert-led optimization sessions."
   },
   {
-    date: "March 19, 2025",
+    date: "May 29, 2025",
     image: image21,
     desc: "Automation testing accelerates release cycles by executing 1,000 tests in minutes—something impossible manually"
   },
   {
-    date: "March 22, 2025",
+    date: "Nov 22, 2024",
     image: image23,
     desc: "Manual testing tells you if the software works. Automation tells you if it keeps working."
   }
@@ -41,8 +44,8 @@ const Events = () => {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl font-semibold mb-10"
         >
-          Event For CodeInspect<br />
-          <span className="text-[#810ec8] font-medium">Connect With Customers</span>
+          <span>Event For CodeInspect</span><br />
+          <span className="mt-2 block text-[#810ec8] font-medium">Connect With Customers</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15">
