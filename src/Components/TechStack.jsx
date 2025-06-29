@@ -5,8 +5,7 @@ const automationTech = [
   { name: 'Selenium', icon: '/tech/selenium-svgrepo-com.svg' },
   { name: 'Cypress', icon: '/tech/Cypress.svg' },
   { name: 'Playwright', icon: '/tech/Playwrite.svg' },
-  // { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
-  { name: 'pytest', icon: '/tech/pytest.svg' },
+  { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
   // { name: 'Postman', icon: '/tech/Jira.svg'},
   // { name: 'Ranorex', icon: '/tech/Cypress.svg'},
 ];
@@ -15,8 +14,10 @@ const performanTech = [
   { name: 'JMeter', icon: '/tech/jmeter.svg' },
   { name: 'JUnit', icon: '/tech/JUnit.svg' },
   { name: 'Jest', icon: '/tech/Jest.svg' },
+  { name: 'pytest', icon: '/tech/pytest.svg' },
+
   // { name: 'Gatling', icon: '/tech/Gatling.svg' },
-  { name: 'Jira', icon: '/tech/Jira.svg' },
+  // { name: 'Jira', icon: '/tech/Jira.svg' },
   // { name: 'k6', icon: '/tech/Jira.svg'},
   // { name: 'Locust', icon: '/tech/Jira.svg'},
   // { name: 'BlazeMeter', icon: '/tech/Jira.svg'},
@@ -27,6 +28,9 @@ const frontendTech = [
   { name: 'React', icon: '/tech/react-original.svg' },
   { name: 'Angular', icon: '/tech/angularjs-original.svg' },
   { name: 'Vuejs', icon: '/tech/vuejs-original.svg'},
+  { name: 'Css', icon: '/tech/css3-original.svg'},
+  { name: 'html', icon: '/tech/html5-original.svg'},
+
   // { name: 'xUnit', icon: '/tech/Jira.svg'},
   // { name: 'Mocha', icon: '/tech/Jira.svg'},
 
@@ -45,6 +49,8 @@ const backendTech = [
   { name: 'Java', icon: '/tech/java-original.svg' },
   { name: 'Php', icon: '/tech/php-original.svg' },
   { name: 'Nodejs', icon: '/tech/nodejs-original.svg' },
+  { name: 'Dotnet', icon: '/tech/dot-net-original.svg' },
+  { name: 'Rust', icon: '/tech/rust-original.svg' },
   // { name: 'MongoDB', icon: '/tech/mongodb-original.svg' },
   // { name: 'Redis', icon: '/tech/redis-original.svg' },
 ];
@@ -119,7 +125,7 @@ const TechStack = () => {
             })}
           </div> */}
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
   {automationTech.map((tech, index) => {
     const gradient = gradientStyles[index % gradientStyles.length];
     return (

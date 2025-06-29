@@ -14,20 +14,6 @@ const Header = () => {
     setMenuOpen(false);
   }, [location]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < 50) {
-        setShowNavbar(true);
-        lastScrollY.current = window.scrollY;
-        return;
-      }
-      setShowNavbar(window.scrollY < lastScrollY.current);
-      lastScrollY.current = window.scrollY;
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -45,33 +31,41 @@ const Header = () => {
     }
   };
 
+  const getActiveClass = (pathOrHash) => {
+    if (pathOrHash.startsWith('#')) {
+      // For anchor links, check if hash matches location.hash or scrollTo state
+      return (location.hash === pathOrHash || location.state?.scrollTo === pathOrHash) ? 'text-blue-400 font-bold' : '';
+    }
+    // For route links
+    return location.pathname === pathOrHash ? 'text-white font-bold' : '';
+  };
+
   return (
     <div
-      className={`fixed top-0 w-full z-50 transition-transform duration-500 bg-black/20 backdrop-blur-xl ${
-        showNavbar ? 'translate-y-0' : '-translate-y-full'
-      }`}
+      className={
+        `fixed top-0 w-full z-50 bg-black/20 backdrop-blur-xl` // Removed scroll-hide logic
+      }
     >
       <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-        {/* <img src={logo1} alt="logo" className="w-28 h-25" /> */}
-
+        {/* Logo clickable, navigates home and scrolls to top */}
+        <Link to="/" onClick={handleScrollToTop} className="cursor-pointer flex items-center group">
           <svg xmlns="http://www.w3.org/2000/svg" width="250" height="60">
-  <g transform="translate(0 10)">
-    <circle cx="25" cy="25" r="20" fill="none" stroke="#2563EB" stroke-width="3"/>
-    <path stroke="#2563EB" stroke-width="3" d="m40 40 15 15"/>
-    <circle cx="25" cy="25" r="6" fill="#22c55e"/>
-    <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
-  </g>
-  <text x="70" y="30" fill="#1f2937" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
-  <text x="70" y="50" fill="white" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
-</svg>
-
-
+            <g transform="translate(0 10)">
+              <circle cx="25" cy="25" r="20" fill="none" stroke="#2563EB" stroke-width="3"/>
+              <path stroke="#2563EB" stroke-width="3" d="m40 40 15 15"/>
+              <circle cx="25" cy="25" r="6" fill="#22c55e"/>
+              <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
+            </g>
+            <text x="70" y="30" fill="#1f2937" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
+            <text x="70" y="50" fill="white" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
+          </svg>
+        </Link>
 
         {/* Desktop Nav */}
           <div className="hidden xl:flex xl:items-center xl:justify-between font-[Host_Grotesk] text-lg gap-12  px-6 py-2 rounded-xl text-white">
             <Link
               to="/"
-              className="relative group transition-all duration-300"
+              className={`relative group transition-all duration-300 ${getActiveClass('/')}`}
             >
               <span onClick={handleScrollToTop} className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Home
@@ -82,7 +76,7 @@ const Header = () => {
             <a
               href="#about"
               onClick={e => handleAnchorClick(e, '#about')}
-              className="relative group transition-all duration-300"
+              className={`relative group transition-all duration-300 ${getActiveClass('#about')}`}
             >
               <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 About Us
@@ -93,7 +87,7 @@ const Header = () => {
             <a
               href="#events"
               onClick={e => handleAnchorClick(e, '#events')}
-              className="relative group transition-all duration-300"
+              className={`relative group transition-all duration-300 ${getActiveClass('#events')}`}
             >
               <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Events
@@ -103,7 +97,7 @@ const Header = () => {
 
             <Link
               to="/privacy-policy"
-              className="relative group transition-all duration-300"
+              className={`relative group transition-all duration-300 ${getActiveClass('/privacy-policy')}`}
             >
               <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Privacy Policy
@@ -113,7 +107,7 @@ const Header = () => {
 
             <Link
               to="/terms-conditions"
-              className="relative group transition-all duration-300"
+              className={`relative group transition-all duration-300 ${getActiveClass('/terms-conditions')}`}
             >
               <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-300">
                 Terms <span className="font-mono">&</span> Conditions

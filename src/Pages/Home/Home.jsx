@@ -52,7 +52,7 @@ const partners = [
 
 const aboutData = [
   {
-    title: 'Regression Testing',
+    title: 'Automation Testing',
     description:
       ' Re-running tests to ensure new code changes haven’t broken existing functionality.',
     img: image25,

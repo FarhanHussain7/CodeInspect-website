@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import image11 from '../assets/Features/image1.webp';
-import image16 from '../assets/Features/annie.jpg';
+import image16 from '../assets/Features/Automation.jpg';
 import image13 from '../assets/Features/christina.jpg';
-import image14 from '../assets/Features/chen.jpg';
+import image14 from '../assets/Features/softwareDevelopment.jpg';
 import image15 from '../assets/Features/softwaretesting.png';
 
 gsap.registerPlugin(ScrollTrigger);

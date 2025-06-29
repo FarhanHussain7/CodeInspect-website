@@ -94,7 +94,7 @@ const Events = () => {
         },
       }}
       whileTap={{ scale: 0.97 }}
-      className="border border-gray bg-black rounded-2xl overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-2xl group"
+      className="border border-gray bg-black  rounded-2xl overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-2xl group"
     >
       <div className="overflow-hidden">
         <motion.img
