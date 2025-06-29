@@ -52,10 +52,23 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-        <img src={logo1} alt="logo" className="w-28 h-25" />
+        {/* <img src={logo1} alt="logo" className="w-28 h-25" /> */}
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="250" height="60">
+  <g transform="translate(0 10)">
+    <circle cx="25" cy="25" r="20" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <path stroke="#2563EB" stroke-width="3" d="m40 40 15 15"/>
+    <circle cx="25" cy="25" r="6" fill="#22c55e"/>
+    <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
+  </g>
+  <text x="70" y="30" fill="#1f2937" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
+  <text x="70" y="50" fill="white" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
+</svg>
+
+
 
         {/* Desktop Nav */}
-          <div className="hidden xl:flex xl:items-center xl:justify-between font-[Host_Grotesk] text-lg gap-20  px-6 py-2 rounded-xl text-white">
+          <div className="hidden xl:flex xl:items-center xl:justify-between font-[Host_Grotesk] text-lg gap-12  px-6 py-2 rounded-xl text-white">
             <Link
               to="/"
               className="relative group transition-all duration-300"
@@ -71,10 +84,10 @@ const Header = () => {
               onClick={e => handleAnchorClick(e, '#about')}
               className="relative group transition-all duration-300"
             >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-300">
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 About Us
               </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </a>
 
             <a
@@ -82,20 +95,20 @@ const Header = () => {
               onClick={e => handleAnchorClick(e, '#events')}
               className="relative group transition-all duration-300"
             >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-300">
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Events
               </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </a>
 
             <Link
               to="/privacy-policy"
               className="relative group transition-all duration-300"
             >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-300">
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Privacy Policy
               </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </Link>
 
             <Link

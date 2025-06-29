@@ -15,16 +15,16 @@ const faqData = [
     answer: "In general, for most mid-sized applications, a reliable automation suite can be built in 2–3 months. However, scaling and optimizing takes time and continuous effort."
   },
   {
-    question: "Question 4: What should I look for when choosing an automation testing company?",
-    answer: "Look for: Expertise in the tools and technologies relevant to your stack, Proven track record with similar projects, Ability to integrate into your existing DevOps/CI-CD pipelines, Transparency in reporting and communication, Flexibility in adapting to changes and evolving requirements, Post-deployment support and script maintenance"
+    question: "Question 4: What is software development, and why is it important for your business?",
+    answer: "Software development is the process of designing, building, testing, and maintaining applications or systems that solve specific problems or enhance user experiences. It involves writing code, creating user interfaces, managing databases, and ensuring performance and security."
   },
   {
-    question: "Question 5: Do automation testing companies offer ongoing support and maintenance?",
-    answer: "Yes, most reputable companies offer: Regular updates to test scripts when the application changes, Regression test execution after code deployments, Troubleshooting flaky or broken tests, Ongoing optimization of test performance."
+    question: "Question 5: How do you ensure website performance and speed?",
+    answer: "We optimize performance by : Minimizing and compressing assets (images, scripts, styles), Using lazy loading and caching, Writing clean, efficient code, Leveraging CDNs and fast hosting"
   },
   {
-    question: "Question 6: Can an automation testing company help improve product quality and reliability?",
-    answer: "Absolutely! Automation: Catches regressions quickly and consistently, Enables faster and safer deployments, Increases test coverage, Reduces human error from manual testing, Identifies performance bottlenecks early"
+    question: "Question 6: What is the typical cost of a web development project?",
+    answer: "Costs vary based on the project’s scope, features, and complexity. A basic website might start around a few hundred dollars, while a custom web application can range into the thousands. We’ll provide a detailed quote after understanding your needs."
   }
 ];
 
@@ -37,23 +37,29 @@ const FAQ = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* Left Column - Title and Contact */}
-          <div className="flex space-y-10">
+          <div className=" space-y-10">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-5xl font-bold bg-white text-transparent bg-clip-text"
             >
-            Ask Us Anything About <br /> CodeInspect <br/> 
-            <span className="mt-4 block">- Find Your Answer <br />
-- Solve It Here <br />
-- Explore Solutions <br />
-- Start Debugging<br />
-- Fix It Fast</span>
-
-            </motion.h1>
-            
-          </div>
+            Ask Us Anything <br/> About <br /> CodeInspects <br/> 
+           </motion.h1>
+           {/* <div className="mt-2 block font-bold ">- Find Your Answer <br />
+                                       - Solve It Here <br />
+                                       - Explore Solutions <br />
+                                       - Start Debugging<br />
+                                       - Fix It Fast</div>
+          </div> */}
+          <div className="mt-2 block font-bold text-xl md:text-2xl bg-gradient-to-r from-black via-pink-500 to-red-500 text-transparent bg-clip-text">
+  - Find Your Answer <br />
+  - Solve It Here <br />
+  - Explore Solutions <br />
+  - Start Debugging <br />
+  - Fix It Fast
+</div>
+</div>
 
           {/* Right Column - FAQ Items */}
           <div className="space-y-4">

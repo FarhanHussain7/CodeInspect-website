@@ -18,7 +18,7 @@ const RefundPolicy = () => {
       </div>
 
       <div className="bg-black rounded-lg shadow-md p-4 mb-8">
-        <h2 className="">The intent of this policy is to provide an easy solution and path to our client and other affiliates for refund with respect to services acquired from PigoPi or our partners or affiliates (Collectively referred to as services).</h2>
+        <h2 className="">The intent of this policy is to provide an easy solution and path to our client and other affiliates for refund with respect to services acquired from CodeInspects or our partners or affiliates (Collectively referred to as services).</h2>
       </div>
 
       {/* OUR SERVICES */}
@@ -53,7 +53,7 @@ const RefundPolicy = () => {
       <div id="user-representations" className="mb-8 bg-black rounded-lg shadow-md p-4">
         <h2 className="text-xl font-semibold mb-4 text-white">3. Limitation of Liability</h2>
         <p className="mb-4">
-        Our liability is bound by the value of the chunk of the project (as per our proposal) which remains incomplete at a given point of time. PigoPi is not obligated for losses due to the services provided/ not provided or the delay in the same at any point of time. The liability to refund holds only if the delivery issue which has been communicated to PigoPi in writing within stipulated time frame as mentioned herein above in clause A sub clause b which shall be restricted upto 10% of total paid invoices.
+        Our liability is bound by the value of the chunk of the project (as per our proposal) which remains incomplete at a given point of time. CodeInspects is not obligated for losses due to the services provided/ not provided or the delay in the same at any point of time. The liability to refund holds only if the delivery issue which has been communicated to CodeInspects in writing within stipulated time frame as mentioned herein above in clause A sub clause b which shall be restricted upto 10% of total paid invoices.
         </p>
       </div>
 
@@ -61,7 +61,7 @@ const RefundPolicy = () => {
       <div id="user-registration" className="mb-8 bg-black rounded-lg shadow-md p-4">
         <h2 className="text-xl font-semibold mb-4 text-white">4. Process for Refund</h2>
         <p className="mb-4">
-        The refund will be processed and emailed within the 180 business days from the date of cancellation while the dispute shall be considered as refundable by the PigoPi.
+        The refund will be processed and emailed within the 180 business days from the date of cancellation while the dispute shall be considered as refundable by the CodeInspects.
         </p>
       </div>
 
@@ -89,10 +89,10 @@ const RefundPolicy = () => {
           In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:
         </p>
         <address className="not-italic">
-          <p className="mb-1">Pigopi</p>
+          <p className="mb-1">CodeInspects</p>
           <p className="mb-1">Greater Noida, Uttar Pradesh 201306</p>
           <p className="mb-1">India</p>
-          <p>Email: info@pigo-pi.com</p>
+          <p>Email: info@CodeInspects.com</p>
         </address>
       </div>
       </div>

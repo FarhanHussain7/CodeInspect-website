@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import image11 from '../assets/Features/image11.jpg';
-import image16 from '../assets/Features/office-4776820.jpg';
-import image13 from '../assets/Features/softtest.jpg';
-import image14 from '../assets/Features/image14.png';
+import image11 from '../assets/Features/image1.webp';
+import image16 from '../assets/Features/annie.jpg';
+import image13 from '../assets/Features/christina.jpg';
+import image14 from '../assets/Features/chen.jpg';
 import image15 from '../assets/Features/softwaretesting.png';
 
 gsap.registerPlugin(ScrollTrigger);

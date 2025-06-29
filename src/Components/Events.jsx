@@ -2,9 +2,9 @@ import React from 'react';
 // import image21 from '../assets/Events/image21.jpg';
 // import image23 from '../assets/Events/image23.png';
 // import image22 from '../assets/Events/image22.png';
-import image21 from '../assets/Events/image1.webp';
-import image23 from '../assets/Events/image2.jpg';
-import image22 from '../assets/Events/image3.jpg';
+import image21 from '../assets/Events/ai-gen.png';
+import image23 from '../assets/Events/headway.jpg';
+import image22 from '../assets/Events/people.jpg';
 import { motion } from "framer-motion";
 
 const events = [
@@ -44,11 +44,11 @@ const Events = () => {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl font-semibold mb-10"
         >
-          <span>Event For CodeInspect</span><br />
+          <span>Event For CodeInspects</span><br />
           <span className="mt-2 block text-[#810ec8] font-medium">Connect With Customers</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15">
           {events.map((event, index) => (
             <motion.div
               key={index}
@@ -74,7 +74,44 @@ const Events = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
+
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15 ">
+  {events.map((event, index) => (
+    <motion.div
+      key={index}
+      initial={getInitialPosition(index)}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+      whileHover={{
+        scale: 1.05,
+        rotate: [0, -1, 1, -0.5, 0.5, 0], // Subtle shake
+        transition: {
+          duration: 0.4,
+          ease: "easeInOut",
+        },
+      }}
+      whileTap={{ scale: 0.97 }}
+      className="border border-gray bg-black rounded-2xl overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-2xl group"
+    >
+      <div className="overflow-hidden">
+        <motion.img
+          src={event.image}
+          alt={`Event ${index + 1}`}
+          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div className="p-4 space-y-4">
+        <p className="inline-block border font-[Host_Grotesk] border-white text-lg px-3 py-1 rounded-md">
+          {event.date}
+        </p>
+        <p className="text-lg font-[Host_Grotesk] text-white-300">{event.desc}</p>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );

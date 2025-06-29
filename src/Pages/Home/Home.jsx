@@ -24,18 +24,18 @@ import image25 from "../../assets/services/image25.jpg"
 const services = [
   {
     title: 'Test Automation Strategy & Consulting',
-    description: `Helping teams choose the right tools, frameworks, and approaches tailored to their product and workflow.`,
+    description: `testing is the process of using software tools to automatically run tests on applications, ensuring they work correctly without manual effort. It speeds up testing, improves accuracy, and helps catch bugs early in development, making the software more reliable and efficient`,
     gradient: 'from-purple-600 to-black'
-  },
-  {
-    title: 'Framework Development',
-    description: `Building reusable, scalable test automation frameworks (e.g., keyword-driven, data-driven, hybrid).`,
-    gradient: 'from-pink-600 to-black'
   },
   {
     title: 'Software Testing Service',
     description: `Deliver bug-free software with our all-inclusive testing services. From functionality and performance to security and automation, our QA specialists ensure your product is dependable, safe, and provides an exceptional user experience before going live.`,
     gradient: 'from-blue-600 to-black'
+  },
+  {
+    title: 'Software Development Service',
+    description: `Development services refer to the professional creation and maintenance of digital solutions like websites, mobile apps, and software systems. These services cover everything from design and coding to testing, deployment, and support, helping businesses bring their tech ideas to life efficiently and effectively`,
+    gradient: 'from-pink-600 to-black'
   },
 ];
 
@@ -113,7 +113,7 @@ const HomePage = () => {
       <div className="relative top-20 left-0 w-full h-screen " />
       <div className="absolute w-full h-screen inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10 pointer-events-none">
         <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center">
-          CodeInspect
+          CodeInspects
         </h1>
         {/* <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 bg-clip-text text-transparent ">
   CodeInspect
@@ -121,7 +121,7 @@ const HomePage = () => {
 
 
 
-        <p className="text-xl font-[Host_Grotesk] tracking-wider text-center">- Automate Everything. Deliver Anything - </p>
+        <p className="text-xl font-[Host_Grotesk] tracking-wider text-center">- Build Better. Test Smarter. Launch Faster - </p>
       </div>
       <div className="relative z-0">
 
@@ -129,7 +129,7 @@ const HomePage = () => {
         <section className="relative w-full bg-gradient-to-r from-blue-400 via-purple-400 px-3 text-center">
           {/* <div className=" bg-gradient-to-br from-indigo-900 via-purple-900 to-zinc-900 max-w-7xl mx-auto text-white py-20 px-2"> */}
             <div className="bg-gradient-to-br from-orange-300 via-pink-300 to-purple-300 max-w-7xl mx-auto text-white py-20 px-4 sm:px-8">
-            <h2 className="text-[9vw] md:text-[4.5vw] font-bold uppercase">Services</h2>
+            <h2 className="text-[9vw] md:text-[4.5vw] font-bold uppercase mb-6 block">Services</h2>
             {/* <div className="w-24 h-1 mx-auto mb-10 bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-500 animate-gradientMove rounded-full"></div> */}
 
             {/* <div className="max-w-7xl text-start mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">

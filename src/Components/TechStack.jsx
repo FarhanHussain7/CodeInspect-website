@@ -1,41 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const frontendTech = [
+const automationTech = [
   { name: 'Selenium', icon: '/tech/selenium-svgrepo-com.svg' },
   { name: 'Cypress', icon: '/tech/Cypress.svg' },
   { name: 'Playwright', icon: '/tech/Playwrite.svg' },
-  { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
-  { name: 'Postman', icon: '/tech/Jira.svg'},
-  { name: 'Ranorex', icon: '/tech/Cypress.svg'},
+  // { name: 'Appium', icon: '/tech/appium-svgrepo-com.svg' },
+  { name: 'pytest', icon: '/tech/pytest.svg' },
+  // { name: 'Postman', icon: '/tech/Jira.svg'},
+  // { name: 'Ranorex', icon: '/tech/Cypress.svg'},
 ];
 
-const backendTech = [
+const performanTech = [
   { name: 'JMeter', icon: '/tech/jmeter.svg' },
-  { name: 'Gatling', icon: '/tech/Gatling.svg' },
-  { name: 'Jira', icon: '/tech/Jira.svg' },
-  { name: 'k6', icon: '/tech/Jira.svg'},
-  { name: 'Locust', icon: '/tech/Jira.svg'},
-  { name: 'BlazeMeter', icon: '/tech/Jira.svg'},
-];
-
-const mobileTech = [
   { name: 'JUnit', icon: '/tech/JUnit.svg' },
   { name: 'Jest', icon: '/tech/Jest.svg' },
-  { name: 'pytest', icon: '/tech/pytest.svg' },
-  { name: 'Jenkins', icon: '/tech/Jira.svg'},
-  { name: 'xUnit', icon: '/tech/Jira.svg'},
-  { name: 'Mocha', icon: '/tech/Jira.svg'},
+  // { name: 'Gatling', icon: '/tech/Gatling.svg' },
+  { name: 'Jira', icon: '/tech/Jira.svg' },
+  // { name: 'k6', icon: '/tech/Jira.svg'},
+  // { name: 'Locust', icon: '/tech/Jira.svg'},
+  // { name: 'BlazeMeter', icon: '/tech/Jira.svg'},
+];
+
+const frontendTech = [
+  { name: 'Javascript', icon: '/tech/javascript-original.svg' },
+  { name: 'React', icon: '/tech/react-original.svg' },
+  { name: 'Angular', icon: '/tech/angularjs-original.svg' },
+  { name: 'Vuejs', icon: '/tech/vuejs-original.svg'},
+  // { name: 'xUnit', icon: '/tech/Jira.svg'},
+  // { name: 'Mocha', icon: '/tech/Jira.svg'},
 
 ];
 
-const databaseTech = [
-  { name: 'Oracle', icon: '/tech/oracle-original.svg' },
-  { name: 'Firebase', icon: '/tech/firebase-plain.svg' },
-  { name: 'MySQL', icon: '/tech/mysql-original.svg' },
-  { name: 'PostgreSQL', icon: '/tech/postgresql-original.svg' },
-  { name: 'MongoDB', icon: '/tech/mongodb-original.svg' },
-  { name: 'Redis', icon: '/tech/redis-original.svg' },
+// const databaseTech = [
+//   { name: 'Oracle', icon: '/tech/oracle-original.svg' },
+//   { name: 'Firebase', icon: '/tech/firebase-plain.svg' },
+//   { name: 'MySQL', icon: '/tech/mysql-original.svg' },
+//   { name: 'PostgreSQL', icon: '/tech/postgresql-original.svg' },
+//   { name: 'MongoDB', icon: '/tech/mongodb-original.svg' },
+//   { name: 'Redis', icon: '/tech/redis-original.svg' },
+// ];
+const backendTech = [
+  { name: 'Python', icon: '/tech/python-original.svg' },
+  { name: 'Java', icon: '/tech/java-original.svg' },
+  { name: 'Php', icon: '/tech/php-original.svg' },
+  { name: 'Nodejs', icon: '/tech/nodejs-original.svg' },
+  // { name: 'MongoDB', icon: '/tech/mongodb-original.svg' },
+  // { name: 'Redis', icon: '/tech/redis-original.svg' },
 ];
 
 const gradientStyles = [
@@ -84,7 +95,7 @@ const TechStack = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl font-semibold mb-12 relative font-[Host_Grotesk] inline-block"
           >
-            Functional Testing Technologies
+            Automation Testing Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
           {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -109,7 +120,7 @@ const TechStack = () => {
           </div> */}
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-  {frontendTech.map((tech, index) => {
+  {automationTech.map((tech, index) => {
     const gradient = gradientStyles[index % gradientStyles.length];
     return (
       <motion.div
@@ -132,7 +143,7 @@ const TechStack = () => {
 </div>
         </div>
 
-        {/* Backend Technologies */}
+        {/* Performance Technologies */}
         <div className='mb-24'>
           <motion.h2
             initial={{ opacity: 0, x: -30 }}
@@ -142,6 +153,74 @@ const TechStack = () => {
             className="text-4xl font-semibold font-[Host_Grotesk] mb-12 relative inline-block"
           >
             Performance Testing Technologies
+            <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
+          </motion.h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {performanTech.map((tech, index) => {
+              const style = gradientStyles[index % gradientStyles.length];
+              return (
+                <motion.div
+                  key={tech.name}
+                  custom={index}
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  style={style}
+                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
+                >
+                  <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
+                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* frontend Technologies */}
+        <div className='mb-24'>
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl font-semibold font-[Host_Grotesk] mb-12 relative inline-block"
+          >
+            Frontend Technologies
+            <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
+          </motion.h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {frontendTech.map((tech, index) => {
+              const style = gradientStyles[index % gradientStyles.length];
+              return (
+                <motion.div
+                  key={tech.name}
+                  custom={index}
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  style={style}
+                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
+                >
+                  <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
+                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* backend Technologies */}
+        <div className='mb-24'>
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl font-semibold font-[Host_Grotesk] mb-12 relative inline-block"
+          >
+            Backend Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -165,74 +244,6 @@ const TechStack = () => {
             })}
           </div>
         </div>
-
-        {/* Mobile Technologies */}
-        <div className='mb-24'>
-          <motion.h2
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl font-semibold font-[Host_Grotesk] mb-12 relative inline-block"
-          >
-            Unit Testing Technologies
-            <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
-          </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {mobileTech.map((tech, index) => {
-              const style = gradientStyles[index % gradientStyles.length];
-              return (
-                <motion.div
-                  key={tech.name}
-                  custom={index}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  style={style}
-                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
-                >
-                  <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Database Technologies */}
-        {/* <div className='mb-24'>
-          <motion.h2
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl font-semibold font-[Host_Grotesk] mb-12 relative inline-block"
-          >
-            Database Technologies
-            <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
-          </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {databaseTech.map((tech, index) => {
-              const style = gradientStyles[index % gradientStyles.length];
-              return (
-                <motion.div
-                  key={tech.name}
-                  custom={index}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  style={style}
-                  className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition duration-300"
-                >
-                  <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div> */}
       </div>
       <div
         className="relative mt-20 w-full flex items-center justify-center mx-auto max-w-7xl h-[1px]"

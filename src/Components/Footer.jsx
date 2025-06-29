@@ -44,9 +44,20 @@ const Footer = () => {
 
           {/* About Section */}
           <motion.div className="flex-1" variants={fadeInUp}>
-            <img className="w-24 h-22 mb-4" src={logo1} alt="PigoPi Logo" />
+            {/* <img className="w-24 h-22 mb-4" src={logo1} alt="PigoPi Logo" /> */}
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="250" height="60">
+  <g transform="translate(0 10)">
+    <circle cx="25" cy="25" r="20" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <path stroke="#2563EB" stroke-width="3" d="m40 40 15 15"/>
+    <circle cx="25" cy="25" r="6" fill="#22c55e"/>
+    <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
+  </g>
+  <text x="70" y="30" fill="white" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
+  <text x="70" y="50" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
+</svg>
             <p className="text-gray-400 px-2">
-              Elevate your digital presence with cutting-edge web design and development services.
+              Elevate your digital presence with cutting-edge testing and development services.
             </p>
 
             {/* Updated Social Icons */}
@@ -105,10 +116,10 @@ const Footer = () => {
               </p>
               <div className="flex flex-col space-y-3">
                 <a
-                  href="mailto:info@pigo-pi.com"
+                  href="mailto:info@CodeInspects.com"
                   className="text-lg text-gray-50 hover:text-white transition"
                 >
-                  info@CodeInspect.com
+                  info@CodeInspects.com
                 </a>
                 <p className="text-lg text-gray-50 hover:text-white transition">
                     Email : arunpe878@gmail.com 
@@ -148,7 +159,7 @@ const Footer = () => {
           variants={fadeInUp}
         >
           <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
-            &copy; {new Date().getFullYear()} CodeInspect. All rights reserved.
+            &copy; {new Date().getFullYear()} CodeInspects. All rights reserved.
           </p>
           <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
             &copy; Powered By PigoPi.
@@ -160,7 +171,7 @@ const Footer = () => {
   variants={fadeInUp}
 >
   <p className="text-sm text-left text-transparent bg-clip-text bg-white">
-    &copy; {new Date().getFullYear()} CodeInspect. All rights reserved.
+    &copy; {new Date().getFullYear()} CodeInspects. All rights reserved.
   </p>
   <p className="text-sm text-right text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400">
      Powered By PigoPi

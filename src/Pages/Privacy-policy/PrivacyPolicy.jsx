@@ -10,14 +10,14 @@ const PrivacyPolicy = () => {
         <p className="mb-4">Last updated: May 5, 2025</p>
 
         <p className="mb-4">
-          This privacy notice for Pigopi ("we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:
+          This privacy notice for CodeInspectspi ("we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>Download and use our mobile application (Pigopi), or any other application of ours that links to this privacy notice</li>
+          <li>Download and use our mobile application (CodeInspectspi), or any other application of ours that links to this privacy notice</li>
           <li>Engage with us in other related ways, including any sales, marketing, or events</li>
         </ul>
         <p className="mb-4">
-          Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@pigo-pi.com
+          Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@CodeInspects.com
         </p>
 
         <h2 className="text-2xl font-semibold mb-4">SUMMARY OF KEY POINTS</h2>
@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
             <b>What are your rights?</b> Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more
           </li>
           <li>
-            <b>How do you exercise your rights?</b> The easiest way to exercise your rights is by visiting https://www.pigopi.co.in/, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
+            <b>How do you exercise your rights?</b> The easiest way to exercise your rights is by visiting https://www.CodeInspects.co.in/, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
           </li>
           <li>
             <b>Want to learn more about what we do with any information we collect?</b> Review the privacy notice in full.
@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
           <h4 className="text-lg font-semibold mb-2">Account Information</h4>
           <p className="mb-4">If you would at any time like to review or change the information in your account or terminate your account, you can:</p>
           <p className="mb-4">Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, we may retain some information in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our legal terms and/or comply with applicable legal requirements.</p>
-          <p className="mb-4">If you have questions or comments about your privacy rights, you may email us at info@pigo-pi.com</p>
+          <p className="mb-4">If you have questions or comments about your privacy rights, you may email us at info@CodeInspects.com</p>
         </section>
 
         <section id="dnt-controls" className="mb-8">
@@ -142,18 +142,18 @@ const PrivacyPolicy = () => {
 
         <section id="contact-notice" className="mb-8">
           <h3 className="text-xl font-semibold mb-4">9. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h3>
-          <p className="mb-4">If you have questions or comments about this notice, you may email us at info@pigo-pi.com or contact us by post at:</p>
+          <p className="mb-4">If you have questions or comments about this notice, you may email us at info@CodeInspects.com or contact us by post at:</p>
           <address>
-            Pigopi<br/>
+            CodeInspectspi<br/>
             Greater Noida, U.P.(201306)<br/>
             India
-            info@pigo-pi.com
+            info@CodeInspects.com
           </address>
         </section>
 
         <section id="review-update-delete" className="mb-8">
           <h3 className="text-xl font-semibold mb-4">10. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h3>
-          <p className="mb-4">You have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please contact at: info@pigo-pi.com</p>
+          <p className="mb-4">You have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please contact at: info@CodeInspects.com</p>
         </section>
       </div>
     </div>
