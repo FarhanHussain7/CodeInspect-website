@@ -23,20 +23,41 @@ import image25 from "../../assets/services/image25.jpg"
 
 const services = [
   {
-    title: 'Test Automation Strategy & Consulting',
+    title: 'Automation tesing ',
     description: `testing is the process of using software tools to automatically run tests on applications, ensuring they work correctly without manual effort. It speeds up testing, improves accuracy, and helps catch bugs early in development, making the software more reliable and efficient`,
     gradient: 'from-purple-600 to-black'
   },
   {
-    title: 'Software Testing Service',
+    title: 'Software Testing ',
     description: `Deliver bug-free software with our all-inclusive testing services. From functionality and performance to security and automation, our QA specialists ensure your product is dependable, safe, and provides an exceptional user experience before going live.`,
     gradient: 'from-blue-600 to-black'
   },
   {
-    title: 'Software Development Service',
+    title: 'Software Development',
     description: `Development services refer to the professional creation and maintenance of digital solutions like websites, mobile apps, and software systems. These services cover everything from design and coding to testing, deployment, and support, helping businesses bring their tech ideas to life efficiently and effectively`,
     gradient: 'from-pink-600 to-black'
   },
+
+  // Automation Testing
+// Functional Testing
+// Mobile App Testing
+// Security Testing
+// Performance Testing
+  {
+    title: 'Mobile testing',
+    description: `Our websites offer a convenient way to manage your mobile connection. You can check your plan, pay bills, recharge, buy devices, activate SIMs, and get support—all in one place. Many also include offers, roaming options, and value-added services to enhance your experience.`,
+    gradient: 'from-green-600 to-black'
+  },
+  {
+    title: 'Security testing ',
+    description: `Security testing is the process of identifying and fixing vulnerabilities in software, systems, or networks to protect against threats and unauthorized access. It helps ensure data privacy, application reliability, and defense against cyberattacks by evaluating how well a system can resist malicious activities.`,
+    gradient: 'from-yellow-600 to-black'
+  },
+  {
+    title: 'Performance testing',
+    description: `Performance testing is a type of testing to ensure software applications will perform well under their expected workload. It involves testing the speed, scalability, and stability characteristics of the application.`,
+    gradient: 'from-orange-600 to-black'
+  }
 ];
 
 const partners = [
@@ -72,6 +93,7 @@ const aboutData = [
     img: image10,
     gradient: 'from-pink-500 to-black',
   },
+  
 ];
 
 const HomePage = () => {

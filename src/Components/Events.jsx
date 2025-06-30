@@ -104,9 +104,9 @@ const Events = () => {
         />
       </div>
       <div className="p-4 space-y-4">
-        <p className="inline-block border font-[Host_Grotesk] border-white text-lg px-3 py-1 rounded-md">
+        {/* <p className="inline-block border font-[Host_Grotesk] border-white text-lg px-3 py-1 rounded-md">
           {event.date}
-        </p>
+        </p> */}
         <p className="text-lg font-[Host_Grotesk] text-white-300">{event.desc}</p>
       </div>
     </motion.div>
