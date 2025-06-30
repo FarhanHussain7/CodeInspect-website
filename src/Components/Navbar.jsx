@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+  const [activeSection, setActiveSection] = useState('');
   const lastScrollY = useRef(window.scrollY);
   const location = useLocation();
   const navigate = useNavigate();
@@ -13,6 +14,27 @@ const Header = () => {
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    const sectionIds = ['services', 'about', 'events', 'contact'];
+    const handleScroll = () => {
+      let found = '';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom > 120) {
+            found = `#${id}`;
+            break;
+          }
+        }
+      }
+      setActiveSection(found);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -32,12 +54,17 @@ const Header = () => {
   };
 
   const getActiveClass = (pathOrHash) => {
-    if (pathOrHash.startsWith('#')) {
-      // For anchor links, check if hash matches location.hash or scrollTo state
-      return (location.hash === pathOrHash || location.state?.scrollTo === pathOrHash) ? 'text-blue-400 font-bold' : '';
+    // Home link stays white when services or about is active
+    if (pathOrHash === '/') {
+      if (activeSection === '#services' || activeSection === '#about') {
+        return 'text-white font-bold';
+      }
+      return location.pathname === '/' && !activeSection ? 'text-blue-400 font-bold' : '';
     }
-    // For route links
-    return location.pathname === pathOrHash ? 'text-white font-bold' : '';
+    if (pathOrHash.startsWith('#')) {
+      return activeSection === pathOrHash ? 'text-blue-400 font-bold' : '';
+    }
+    return location.pathname === pathOrHash ? 'text-blue-400 font-bold' : '';
   };
 
   return (
@@ -62,7 +89,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-          <div className="hidden xl:flex xl:items-center xl:justify-between font-[Host_Grotesk] text-lg gap-12  px-6 py-2 rounded-xl text-white">
+          <div className="hidden xl:flex xl:items-center font-[Host_Grotesk] text-lg space-x-8 px-6 py-2 rounded-xl text-white whitespace-nowrap">
             <Link
               to="/"
               className={`relative group transition-all duration-300 ${getActiveClass('/')}`}
@@ -72,6 +99,17 @@ const Header = () => {
               </span>
               <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </Link>
+
+            <a
+              href="#services"
+              onClick={e => handleAnchorClick(e, '#services')}
+              className={`relative group transition-all duration-300 ${getActiveClass('#services')}`}
+            >
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+                Services
+              </span>
+              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+            </a>
 
             <a
               href="#about"
@@ -109,10 +147,10 @@ const Header = () => {
               to="/terms-conditions"
               className={`relative group transition-all duration-300 ${getActiveClass('/terms-conditions')}`}
             >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-300">
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
                 Terms <span className="font-mono">&</span> Conditions
               </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </Link>
         {/* <a
           href="#contact"
@@ -169,6 +207,7 @@ const Header = () => {
       {menuOpen && (
         <div className="xl:hidden bg-black/80 h-screen text-white flex flex-col items-center gap-6 py-6">
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <a href="#services" onClick={e => handleAnchorClick(e, '#services')}>Services</a>
           <a href="#about" onClick={e => handleAnchorClick(e, '#about')}>About Us</a>
           <a href="#events" onClick={e => handleAnchorClick(e, '#events')}>Events</a>
           <Link to="/privacy-policy" onClick={() => setMenuOpen(false)}>Privacy Policy</Link>

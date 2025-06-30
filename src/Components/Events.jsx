@@ -45,7 +45,7 @@ const Events = () => {
           className="text-4xl sm:text-5xl font-semibold mb-10"
         >
           <span>Event For CodeInspects</span><br />
-          <span className="mt-2 block text-[#810ec8] font-medium">Connect With Customers</span>
+          <span className="mt-6 block text-[#810ec8] font-medium">Connect With Customers</span>
         </motion.h2>
 
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15">
@@ -77,7 +77,7 @@ const Events = () => {
         </div> */}
 
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-15 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-13 ">
   {events.map((event, index) => (
     <motion.div
       key={index}

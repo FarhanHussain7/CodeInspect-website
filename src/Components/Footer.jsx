@@ -143,9 +143,19 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={handleScrollToTop} className="hover:text-pink-300 transition duration-300">
+                <a
+                  href="/#services"
+                  className="hover:text-pink-300 transition duration-300"
+                  onClick={e => {
+                    if (window.location.pathname === "/") {
+                      e.preventDefault();
+                      const el = document.getElementById('services');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   Service
-                </button>
+                </a>
               </li>
               <li>
                 <Link to="/refund-policy" className="hover:text-pink-300 transition duration-300">Refund Policy</Link>
