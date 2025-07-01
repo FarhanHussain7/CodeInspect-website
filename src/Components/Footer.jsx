@@ -61,52 +61,6 @@ const Footer = () => {
             <p className="text-gray-400 px-2">
               Elevate your digital presence with cutting-edge testing and development services.
             </p>
-
-            {/* Updated Social Icons */}
-            <div className="flex items-center gap-4 px-2 mt-6">
-              <a
-                // href="https://www.facebook.com/profile.php?id=61576543783204&sk=about"
-                 href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#1877F2] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
-              >
-                <FaFacebookF className="text-white text-xl" />
-              </a>
-              <a
-                // href="https://www.instagram.com/pigopi_314?igsh=dzMwamsycmpkd204&utm_source=qr"
-               href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 p-2 rounded-full hover:scale-110 transition transform shadow-lg"
-              >
-                <FaInstagram className="text-white text-xl" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#0077B5] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
-              >
-                <FaLinkedinIn className="text-white text-xl" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#1DA1F2] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
-              >
-                <FaTwitter className="text-white text-xl" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#FF0000] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
-              >
-                <FaYoutube className="text-white text-xl" />
-              </a>
-            </div>
           </motion.div>
 
           {/* Get in Touch Section */}
@@ -170,19 +124,51 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Divider */}
-        {/* <motion.div
-          className="mt-10 border-t border-gray-700 pt-4 text-center"
-          variants={fadeInUp}
-        >
-          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
-            &copy; {new Date().getFullYear()} CodeInspects. All rights reserved.
-          </p>
-          <p className="text-sm max-w-xs mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-400">
-            &copy; Powered By PigoPi.
-          </p>
-        </motion.div> */}
+        {/* Social Icons: Move after legal links in mobile, keep original in desktop */}
+        <div className="flex items-center gap-4 px-2 mt-6 md:mt-6 md:mb-0 w-full justify-center md:justify-start md:order-none order-last md:static relative">
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#1877F2] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
+          >
+            <FaFacebookF className="text-white text-xl" />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 p-2 rounded-full hover:scale-110 transition transform shadow-lg"
+          >
+            <FaInstagram className="text-white text-xl" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#0077B5] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
+          >
+            <FaLinkedinIn className="text-white text-xl" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#1DA1F2] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
+          >
+            <FaTwitter className="text-white text-xl" />
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#FF0000] p-2 rounded-full hover:scale-110 transition transform shadow-lg"
+          >
+            <FaYoutube className="text-white text-xl" />
+          </a>
+        </div>
 
+        {/* Divider */}
         <motion.div
   className="mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-center md:justify-between items-center text-center gap-2 md:gap-0"
   variants={fadeInUp}
