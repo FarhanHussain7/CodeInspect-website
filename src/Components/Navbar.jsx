@@ -83,7 +83,7 @@ const Header = () => {
               <circle cx="25" cy="25" r="6" fill="#22c55e"/>
               <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
             </g>
-            <text x="70" y="30" fill="#1f2937" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
+            <text x="70" y="30" fill="white" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
             <text x="70" y="50" fill="white" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
           </svg>
         </Link>
@@ -210,7 +210,7 @@ const Header = () => {
           <a href="#services" onClick={e => handleAnchorClick(e, '#services')}>Services</a>
           <a href="#about" onClick={e => handleAnchorClick(e, '#about')}>About Us</a>
           <a href="#events" onClick={e => handleAnchorClick(e, '#events')}>Events</a>
-          <Link to="/privacy-policy" onClick={() => setMenuOpen(false)}>Privacy Policy</Link>
+          {/* <Link to="/privacy-policy" onClick={() => setMenuOpen(false)}>Privacy Policy</Link> */}
           <Link to="/terms-conditions" onClick={() => setMenuOpen(false)}>Terms & Conditions</Link>
           <a href="#contact" className='bg-blue-500 px-12 rounded-xl py-2' onClick={e => handleAnchorClick(e, '#contact')}>Contact Now</a>
         </div>
