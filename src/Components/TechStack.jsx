@@ -140,7 +140,7 @@ const TechStack = () => {
         className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
       >
         <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-        <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">
+        <span className="text-base sm:text-xl font-medium text-white font-[Host_Grotesk] mt-2">
           {tech.name}
         </span>
       </motion.div>
@@ -176,7 +176,7 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
+                  <span className="text-base sm:text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}
@@ -210,7 +210,7 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
+                  <span className="text-base sm:text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}
@@ -244,7 +244,7 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
+                  <span className="text-base sm:text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}

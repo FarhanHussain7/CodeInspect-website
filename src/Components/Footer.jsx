@@ -184,20 +184,17 @@ const Footer = () => {
         </motion.div> */}
 
         <motion.div
-  className="mt-10 border-t border-gray-700 pt-4 flex justify-between items-center"
+  className="mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-center md:justify-between items-center text-center gap-2 md:gap-0"
   variants={fadeInUp}
 >
-  <p className="text-sm text-left text-transparent bg-clip-text bg-white">
+  <p className="text-sm text-transparent bg-clip-text bg-white">
     &copy; {new Date().getFullYear()} CodeInspects. All rights reserved.
   </p>
-  {/* <p className="text-sm text-right text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-pink-400">
-     Powered By PigoPi
-  </p> */}
   <a
     href="https://pigo-pi.com/"
     target="_blank"
     rel="noopener noreferrer"
-    className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400 text-center mx-auto"
+    className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400"
   >
     Powered By PigoPi
   </a>
