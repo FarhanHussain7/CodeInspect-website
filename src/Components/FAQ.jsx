@@ -46,19 +46,21 @@ const FAQ = () => {
             >
             Ask Us Anything <br/> About <br /> CodeInspects <br/> 
            </motion.h1>
-           {/* <div className="mt-2 block font-bold ">- Find Your Answer <br />
+          
+           <div className="mt-2 block font-normal text-xl text-black">
+                                      - Find Your Answer <br />
                                        - Solve It Here <br />
                                        - Explore Solutions <br />
                                        - Start Debugging<br />
-                                       - Fix It Fast</div>
-          </div> */}
-          <div className="mt-2 block font-bold text-xl md:text-2xl bg-gradient-to-r from-black via-pink-500 to-red-500 text-transparent bg-clip-text font-[cursive] tracking-wide italic drop-shadow-lg">
+                                       - Fix It Fast
+          </div>
+          {/* <div className="mt-2 block font-bold text-xl md:text-2xl bg-gradient-to-r from-black via-pink-500 to-red-500 text-transparent bg-clip-text font-[cursive] tracking-wide italic drop-shadow-lg">
   - Find Your Answer <br />
   - Solve It Here <br />
   - Explore Solutions <br />
   - Start Debugging <br />
   - Fix It Fast
-</div>
+</div> */}
 </div>
 
           {/* Right Column - FAQ Items */}
