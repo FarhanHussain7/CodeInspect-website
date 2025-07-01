@@ -54,7 +54,7 @@ const Footer = () => {
                   <path stroke="#22c55e" stroke-width="1.5" d="m19 20-4-5M31 20l4-5M19 30l-4 5M31 30l4 5"/>
                 </g>
                 <text x="70" y="30" fill="white" font-family="Arial, sans-serif" font-size="20">CodeInspects</text>
-                <text x="70" y="50" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
+                <text x="70" y="50" fill="white" font-family="Arial, sans-serif" font-size="12">Automation Testing</text>
               </svg>
             </Link>
 

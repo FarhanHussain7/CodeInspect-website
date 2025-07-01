@@ -36,12 +36,12 @@ const DataForm = () => {
           </div>
         </div>
 
-        <div
+        {/* <div
           className="relative mt-20 w-full flex items-center justify-center mx-auto max-w-7xl h-[1px]"
           style={{
             background: `radial-gradient(circle at center, rgba(59,130,246,1) 0%, rgba(168,85,247,1) 30%, rgba(236,72,153,0.4) 70%, transparent 100%)`
           }}
-        />
+        /> */}
       </div>
     </>
   );

@@ -340,7 +340,7 @@ const Header = () => {
           <a href="#services" onClick={e => handleAnchorClick(e, '#services')}>Services</a>
           <a href="#about" onClick={e => handleAnchorClick(e, '#about')}>About Us</a>
           <a href="#events" onClick={e => handleAnchorClick(e, '#events')}>Events</a>
-          <Link to="/terms-conditions" onClick={() => setMenuOpen(false)}>Terms & Conditions</Link>
+          {/* <Link to="/terms-conditions" onClick={() => setMenuOpen(false)}>Terms & Conditions</Link> */}
           <a href="#contact" className='bg-blue-500 px-12 rounded-xl py-2' onClick={e => handleAnchorClick(e, '#contact')}>Contact Now</a>
         </div>
       )}
