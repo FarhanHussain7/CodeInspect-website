@@ -137,7 +137,7 @@ const Header = () => {
               Privacy Policy
             </span>
             <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-          </Link> */}
+          </Link>
 
           <Link
             to="/terms-conditions"
@@ -146,8 +146,8 @@ const Header = () => {
             <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
               Terms <span className="font-mono">&</span> Conditions
             </span>
-            {/* <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span> */}
-          </Link>
+            <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span> 
+          </Link> */}
       {/* <a
         href="#contact"
         className="relative px-8 py-2 font-bold text-lg text-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 rounded-xl group overflow-hidden transition-all duration-300"
