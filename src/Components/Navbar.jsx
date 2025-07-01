@@ -54,17 +54,17 @@ const Header = () => {
   };
 
   const getActiveClass = (pathOrHash) => {
-    // Home link stays white when services or about is active
+    // Home link is neutral when services or about is active
     if (pathOrHash === '/') {
       if (activeSection === '#services' || activeSection === '#about') {
-        return 'text-white font-bold';
+        return '';
       }
-      return location.pathname === '/' && !activeSection ? 'text-blue-400 font-bold' : '';
+      return location.pathname === '/' && !activeSection ? 'text-blue-400 font-bold underline underline-offset-8' : '';
     }
     if (pathOrHash.startsWith('#')) {
-      return activeSection === pathOrHash ? 'text-blue-400 font-bold' : '';
+      return activeSection === pathOrHash ? 'text-blue-400 font-bold underline underline-offset-8' : '';
     }
-    return location.pathname === pathOrHash ? 'text-blue-400 font-bold' : '';
+    return location.pathname === pathOrHash ? 'text-blue-400 font-bold underline underline-offset-8' : '';
   };
 
   return (
@@ -88,84 +88,80 @@ const Header = () => {
           </svg>
         </Link>
 
-        {/* Desktop Nav */}
-          <div className="hidden xl:flex xl:items-center font-[Host_Grotesk] text-lg space-x-8 px-6 py-2 rounded-xl text-white whitespace-nowrap">
-            <Link
-              to="/"
-              className={`relative group transition-all duration-300 ${getActiveClass('/')}`}
-            >
-              <span onClick={handleScrollToTop} className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                Home
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </Link>
+        {/* Desktop Nav - always show on desktop width, even in desktop mode on mobile browsers */}
+        <div className="hidden xl:flex xl:items-center font-[Host_Grotesk] text-lg space-x-8 px-6 py-2 rounded-xl text-white whitespace-nowrap" style={{ display: window.innerWidth >= 1280 ? 'flex' : undefined }}>
+          <Link
+            to="/"
+            className={`relative group transition-all duration-300 ${getActiveClass('/')}`}
+          >
+            <span onClick={handleScrollToTop} className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              Home
+            </span>
+          </Link>
 
-            <a
-              href="#services"
-              onClick={e => handleAnchorClick(e, '#services')}
-              className={`relative group transition-all duration-300 ${getActiveClass('#services')}`}
-            >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                Services
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </a>
+          <a
+            href="#services"
+            onClick={e => handleAnchorClick(e, '#services')}
+            className={`relative group transition-all duration-300 ${getActiveClass('#services')}`}
+          >
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              Services
+            </span>
+          </a>
 
-            <a
-              href="#about"
-              onClick={e => handleAnchorClick(e, '#about')}
-              className={`relative group transition-all duration-300 ${getActiveClass('#about')}`}
-            >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                About Us
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </a>
+          <a
+            href="#about"
+            onClick={e => handleAnchorClick(e, '#about')}
+            className={`relative group transition-all duration-300 ${getActiveClass('#about')}`}
+          >
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              About Us
+            </span>
+          </a>
 
-            <a
-              href="#events"
-              onClick={e => handleAnchorClick(e, '#events')}
-              className={`relative group transition-all duration-300 ${getActiveClass('#events')}`}
-            >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                Events
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </a>
+          <a
+            href="#events"
+            onClick={e => handleAnchorClick(e, '#events')}
+            className={`relative group transition-all duration-300 ${getActiveClass('#events')}`}
+          >
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              Events
+            </span>
+          </a>
 
-            {/* <Link
-              to="/privacy-policy"
-              className={`relative group transition-all duration-300 ${getActiveClass('/privacy-policy')}`}
-            >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                Privacy Policy
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </Link> */}
+          {/* <Link
+            to="/privacy-policy"
+            className={`relative group transition-all duration-300 ${getActiveClass('/privacy-policy')}`}
+          >
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              Privacy Policy
+            </span>
+            <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+          </Link> */}
 
-            <Link
-              to="/terms-conditions"
-              className={`relative group transition-all duration-300 ${getActiveClass('/terms-conditions')}`}
-            >
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
-                Terms <span className="font-mono">&</span> Conditions
-              </span>
-              <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </Link>
-        {/* <a
-          href="#contact"
-          className="relative px-8 py-2 font-bold text-lg text-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 rounded-xl group overflow-hidden transition-all duration-300"
-          onClick={e => handleAnchorClick(e, '#contact')}
-        >
-          { Glow effect }
-          <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out scale-125 group-hover:scale-100 blur-md"></span>
+          <Link
+            to="/terms-conditions"
+            className={`relative group transition-all duration-300 ${getActiveClass('/terms-conditions')}`}
+          >
+            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
+              Terms <span className="font-mono">&</span> Conditions
+            </span>
+            <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+          </Link>
+      {/* <a
+        href="#contact"
+        className="relative px-8 py-2 font-bold text-lg text-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 rounded-xl group overflow-hidden transition-all duration-300"
+        onClick={e => handleAnchorClick(e, '#contact')}
+      >
+        { Glow effect }
+        <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out scale-125 group-hover:scale-100 blur-md"></span>
 
-          { Shine effect }
-          <span className="absolute inset-0 z-0 bg-white/10 group-hover:animate-pulse"></span>
+        { Shine effect }
+        <span className="absolute inset-0 z-0 bg-white/10 group-hover:animate-pulse"></span>
 
-          <span className="relative z-10">Contact Now</span>
-        </a> */}
-        <a
+        <span className="relative z-10">Contact Now</span>
+      </a> */}
+      <a
   href="#contact"
   className="relative px-8 py-2 font-bold text-lg text-white border-2 border-white rounded-xl group overflow-hidden transition-all duration-300 bg-zinc-300 hover:bg-gray-900"
   onClick={e => handleAnchorClick(e, '#contact')}
@@ -194,7 +190,7 @@ const Header = () => {
     </svg>
   </span>
 </a>
-          </div>
+        </div>
 
 
         {/* Mobile Icon */}

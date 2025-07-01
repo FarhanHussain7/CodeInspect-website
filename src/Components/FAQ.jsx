@@ -76,7 +76,7 @@ const FAQ = () => {
                   className="w-full py-4 flex justify-between items-center text-left"
                 >
                   <span className="text-lg font-medium text-black">{faq.question}</span>
-                  <span className={`transform transition-transform duration-300 ${activeIndex === index ? 'rotate-45' : ''}`}>
+                  <span className={`transform transition-transform duration-300 text-3xl md:text-4xl ${activeIndex === index ? 'rotate-45' : ''}`}>
                     {activeIndex === index ? '×' : '+'}
                   </span>
                 </button>
@@ -89,7 +89,7 @@ const FAQ = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-4 text-white">{faq.answer}</p>
+                      <p className="pb-4 text-purple-800">{faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
