@@ -132,7 +132,7 @@ const HomePage = () => {
       </div>
       
 
-      <div className="relative top-20 left-0 w-full h-screen " />
+      <div className="relative top-20 left-0 w-full h-100 sm:h-screen " />
       <div className="absolute w-full h-screen inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10 pointer-events-none">
         <h1 className="text-[11vw] font-extrabold tracking-wide font-[Host_Grotesk] text-center">
           CodeInspects
@@ -170,7 +170,7 @@ const HomePage = () => {
               ))}
             </div> */}
 
-            <div className="max-w-7xl text-start mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="max-w-7xl text-start mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
   {services.map((service, idx) => (
     <motion.div
       key={idx}
@@ -206,7 +206,7 @@ const HomePage = () => {
 
             <h2 id="about" className="text-[8vw] md:text-[4.5vw] font-bold text-center mt-35 uppercase">Our Main Goals</h2>
             {/* <div className="w-24 h-1 mx-auto mb-15 bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-500 animate-gradientMove rounded-full"></div> */}
-            <div className="max-w-7xl text-center md:text-start mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-2">
+            <div className="max-w-7xl text-center md:text-start mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 px-2">
               {aboutData.map((item, index) => (
               <motion.div
                 key={index}
@@ -244,8 +244,8 @@ const HomePage = () => {
         </section>
 
         {/* Benefits */}
-        <div className="w-full bg-gradient-to-r from-blue-400 via-purple-400 text-white px-10 sm:px-6 md:px-8 py-12 sm:py-16">
-          <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8">
+        <div className="w-full bg-gradient-to-r from-blue-400 via-purple-400 text-white px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+          <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-4 md:gap-8">
             {/* Left Section Title */}
             <div className="w-full lg:w-2/5 mb-6 lg:mb-0">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">The Benefits</h2>

@@ -125,7 +125,7 @@ const TechStack = () => {
             })}
           </div> */}
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
   {automationTech.map((tech, index) => {
     const gradient = gradientStyles[index % gradientStyles.length];
     return (
@@ -140,7 +140,7 @@ const TechStack = () => {
         className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
       >
         <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-        <span className="text-xl font-medium text-white font-[Host_Grotesk]">
+        <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">
           {tech.name}
         </span>
       </motion.div>
@@ -161,7 +161,7 @@ const TechStack = () => {
             Performance Testing Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
             {performanTech.map((tech, index) => {
               const style = gradientStyles[index % gradientStyles.length];
               return (
@@ -176,7 +176,7 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
+                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}
@@ -195,7 +195,7 @@ const TechStack = () => {
             Frontend Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
             {frontendTech.map((tech, index) => {
               const style = gradientStyles[index % gradientStyles.length];
               return (
@@ -210,7 +210,7 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
+                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}
@@ -229,7 +229,7 @@ const TechStack = () => {
             Backend Technologies
             <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center items-center">
             {backendTech.map((tech, index) => {
               const style = gradientStyles[index % gradientStyles.length];
               return (
@@ -244,19 +244,19 @@ const TechStack = () => {
                   className="p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center aspect-square transition-transform duration-300 transform hover:scale-105 hover:z-10"
                 >
                   <img src={tech.icon} alt={tech.name} className="w-20 h-20 mb-4" />
-                  <span className="text-xl font-medium text-white font-[Host_Grotesk]">{tech.name}</span>
+                  <span className="text-xl font-medium text-white font-[Host_Grotesk] mt-2">{tech.name}</span>
                 </motion.div>
               );
             })}
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         className="relative mt-20 w-full flex items-center justify-center mx-auto max-w-7xl h-[1px]"
         style={{
           background: `radial-gradient(circle at center, rgba(59,130,246,1) 0%, rgba(168,85,247,1) 30%, rgba(236,72,153,0.4) 70%, transparent 100%)`
         }}
-      />
+      /> */}
     </div>
   );
 };

@@ -52,7 +52,7 @@ const FAQ = () => {
                                        - Start Debugging<br />
                                        - Fix It Fast</div>
           </div> */}
-          <div className="mt-2 block font-bold text-xl md:text-2xl bg-gradient-to-r from-black via-pink-500 to-red-500 text-transparent bg-clip-text">
+          <div className="mt-2 block font-bold text-xl md:text-2xl bg-gradient-to-r from-black via-pink-500 to-red-500 text-transparent bg-clip-text font-[cursive] tracking-wide italic drop-shadow-lg">
   - Find Your Answer <br />
   - Solve It Here <br />
   - Explore Solutions <br />
@@ -89,7 +89,7 @@ const FAQ = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-4 text-purple-800">{faq.answer}</p>
+                      <p className="pb-4 text-blue-500 font-bold">{faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

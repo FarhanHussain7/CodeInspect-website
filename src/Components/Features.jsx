@@ -32,11 +32,15 @@ const Features = () => {
         });
       });
 
+      // Faster animation for mobile view
+      const duration = isDesktop ? 0.8 : 0.4;
+      const stagger = isDesktop ? 0.18 : 0.08;
+
       gsap.to(images, {
         x: 0,
         y: 0,
-        duration: 0.8,
-        stagger: 0.18,
+        duration,
+        stagger,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: containerRef.current,

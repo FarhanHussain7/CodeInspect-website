@@ -190,12 +190,17 @@ const Footer = () => {
   <p className="text-sm text-left text-transparent bg-clip-text bg-white">
     &copy; {new Date().getFullYear()} CodeInspects. All rights reserved.
   </p>
-  {/* <p className="text-sm text-right text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400">
+  {/* <p className="text-sm text-right text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-pink-400">
      Powered By PigoPi
   </p> */}
-  <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400 text-center mx-auto">
-  Powered By PigoPi
-</p>
+  <a
+    href="https://pigo-pi.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-green-400 text-center mx-auto"
+  >
+    Powered By PigoPi
+  </a>
 </motion.div>
       </div>
     </motion.footer>

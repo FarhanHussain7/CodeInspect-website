@@ -89,7 +89,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav - always show on desktop width, even in desktop mode on mobile browsers */}
-        <div className="hidden xl:flex xl:items-center font-[Host_Grotesk] text-lg space-x-8 px-6 py-2 rounded-xl text-white whitespace-nowrap" style={{ display: window.innerWidth >= 1280 ? 'flex' : undefined }}>
+        <div className="hidden xl:flex xl:items-center font-[Host_Grotesk] text-lg space-x-8 px-6 py-2 rounded-xl text-white whitespace-nowrap">
           <Link
             to="/"
             className={`relative group transition-all duration-300 ${getActiveClass('/')}`}
@@ -146,7 +146,7 @@ const Header = () => {
             <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-300">
               Terms <span className="font-mono">&</span> Conditions
             </span>
-            <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
+            {/* <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span> */}
           </Link>
       {/* <a
         href="#contact"
