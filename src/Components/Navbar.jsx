@@ -133,7 +133,7 @@ const Header = () => {
               <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
             </a>
 
-            <Link
+            {/* <Link
               to="/privacy-policy"
               className={`relative group transition-all duration-300 ${getActiveClass('/privacy-policy')}`}
             >
@@ -141,7 +141,7 @@ const Header = () => {
                 Privacy Policy
               </span>
               <span className="absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-300 transition-all duration-500 ease-in-out transform -translate-x-1/2 group-hover:w-full rounded-full"></span>
-            </Link>
+            </Link> */}
 
             <Link
               to="/terms-conditions"
